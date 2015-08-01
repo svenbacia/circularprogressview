@@ -24,7 +24,12 @@ Copy `CircularProgressView` into your project.
 * `inset`: The inset of the progress shapes line width. The default value is 0 which means that the progressShape is as thick as the background shapes `lineWidth`.
 * `lineCap`: Specifies the line cap for the progress shape (`butt`, `round` or `square`).
 
+All attributes (except `lineCap`) can be edited directly in Interface Builder.
+
+![Edit Attributes in Interface Builder][screenshot_01]
+
 ## License
 `CircularProgressView` is release under an MIT License.
 
 [preview]: Assets/CircularProgressView.gif
+[screenshot_01]: Assets/Screenshot_01.png
