@@ -1,5 +1,7 @@
 # CircularProgressView
 `CircularProgressView` is a customisable circular progress view written in Swift.
+
+
 ![CircularProgressView Preview][preview]
 
 ## Requirements
