@@ -84,8 +84,8 @@ public final class CircularProgressView: UIView {
   private var progressAnimation: CABasicAnimation!
   
   // MARK: - Init
-  
-  public required init(coder aDecoder: NSCoder) {
+
+  public required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     setup()
   }
@@ -120,8 +120,8 @@ public final class CircularProgressView: UIView {
     }
     
     var start = progressShape.strokeEnd
-    if progressShape.animationKeys()?.count > 0 {
-      start = progressShape.presentationLayer().strokeEnd
+    if let presentationLayer = progressShape.presentationLayer() where progressShape.animationKeys()?.count > 0  {
+      start = presentationLayer.strokeEnd
     }
     
     let duration = abs(Double(progress - start)) * completeDuration
@@ -154,7 +154,7 @@ public final class CircularProgressView: UIView {
   
   private func updateShapes() {
     backgroundShape?.lineWidth  = lineWidth
-    backgroundShape.strokeColor = backgroundShapeColor.CGColor
+    backgroundShape?.strokeColor = backgroundShapeColor.CGColor
     
     progressShape?.strokeColor = progressShapeColor.CGColor
     progressShape?.lineWidth   = lineWidth - inset
