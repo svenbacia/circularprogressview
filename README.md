@@ -7,7 +7,7 @@
 ## Requirements
 * iOS 8.x
 * Xcode 6
-* Swift 1.x
+* Swift 2
 
 ## Installation
 Copy `CircularProgressView` into your project.
@@ -18,7 +18,7 @@ Copy `CircularProgressView` into your project.
 3. call `setProgress(animated:)` to set the new progress with or without animation.
 
 ## Attributes
-* `backgroundShapeColor`: The progress views background color. 
+* `backgroundShapeColor`: The progress views background color.
 * `progressShapeColor`: The progress color.
 * `lineWidth`: The line width of the background shape.
 * `inset`: The inset of the progress shapes line width. The default value is 0 which means that the progressShape is as thick as the background shapes `lineWidth`.
